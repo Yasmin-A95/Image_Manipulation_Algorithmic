@@ -42,5 +42,5 @@ function saveImage(canvas) {
         chromaSubsampling: false
     })
     stream.pipe(out)
-    out.on('finish', () => console.log('The JPEG file was created.'))
+    out.on('finish', () => console.log('The JPG file was created.'))
 }
