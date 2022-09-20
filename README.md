@@ -20,3 +20,6 @@ loadImage('./assets/house0.JPG').then((image) => {
 ## Mess With It and Make Cool Stuff!
 Then show me! Also let's be friends.
 
+### Also CREDIT TO WEIDI
+
+[This youtube video](https://www.youtube.com/watch?v=me04ZrTJqWA) helped me get started with image manipulation using [p5js](https://p5js.org/) before it kept crashing and this code became neccessary 
