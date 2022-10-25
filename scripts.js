@@ -10,7 +10,8 @@ loadImage('./assets/house0.JPG').then((image) => {
     offscreenCTX.drawImage(image, 0, 0);
     for (let y = 0; y < image.width; y += 5) {
         for (let x = 0; x < image.height; x += 10) { // fuck wid whats in here
-            circles(offscreenCTX, y, x, ctx)
+            //circles(offscreenCTX, y, x, ctx)
+            ASCII(offscreenCTX, y, x, ctx)
             // ctx.beginPath();
             // ctx.rect(x, y, 10, 5)
             // ctx.stroke();
@@ -18,6 +19,17 @@ loadImage('./assets/house0.JPG').then((image) => {
     }
     saveImage(canvas);
 })
+
+function ASCII(offscreenCTX, y, x, ctx) {
+    const colorAtPixel = offscreenCTX.getImageData(y + 5, x + 5, 1, 1)
+    const r = colorAtPixel.data[0];
+    const g = colorAtPixel.data[1];
+    const b = colorAtPixel.data[3];
+    ctx.beginPath();
+    ctx.fill(r, g, b);
+    //textSize(width);
+    text("G", i * width, j * h)
+}
 
 function mathThatWorksForHighResImgs(offscreenCTX, ctx, image) {
     for (let y = 0; y < image.width; y += 5) {
